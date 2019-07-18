@@ -1,0 +1,44 @@
+<html>
+<body>
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <!-- <img src="" id="icon" alt="User Icon" /> -->
+      <h1>Iniciar Sesion</h1>
+    </div>
+
+    <!-- Login Form -->
+    <form [formGroup]="this.form">
+      <input type="email" class="fadeIn second" placeholder="Correo" formControlName="correo" [ngClass]="{
+        'border border-danger': !form.controls.correo.valid && form.controls.correo.touched,
+        'border border-success': form.controls.correo.valid }">
+      <div class="alert alert-danger" *ngIf="!form.controls.correo.valid && form.controls.correo.touched">
+        <div *ngIf="form.controls.correo.errors.required">El correo es requerido.</div>
+        <div *ngIf="form.controls.correo.errors.email">El correo no tiene el formato indicado.</div>
+      </div>
+      <input type="password" class="fadeIn third" placeholder="Contraseña" formControlName="clave"
+       [ngClass]="{
+        'border border-danger': !form.controls.clave.valid && form.controls.clave.touched,
+        'border border-success': form.controls.clave.valid }">
+      <div class="alert alert-danger" *ngIf="!form.controls.clave.valid && form.controls.clave.touched">
+        <div *ngIf="form.controls.clave.errors.required">La clave es requerida.</div>
+        <div *ngIf="!form.controls.clave.errors.minLength && !form.controls.clave.errors.required">La clave no tiene el largo requerido.</div>
+        
+      </div>
+      <!-- <button class="btn btn-primary fadeIn fourth" value="" (click)="enviarFormulario()"
+      [disabled]="!this.form.valid"> Ingresar</button> -->
+      <input type="button" class="fadeIn fourth" value="Ingresar" (click)="enviarFormulario()" [disabled]="!this.form.valid">
+    </form>
+    <div class="alert alert-warning" *ngIf="mostrarError">{{mensajeError}}</div>
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover"routerLink="/registro">No esta registrado?</a>
+    </div>
+    
+  </div>
+</div>
+</body>
+</html>

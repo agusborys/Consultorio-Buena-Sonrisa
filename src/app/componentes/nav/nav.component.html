@@ -1,0 +1,33 @@
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"> -->
+      
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" ><!-- style="background-color: #d8eefd;"-->
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>  collapse-->
+    <div class=" navbar-collapse" id="navbarTogglerDemo01">
+      <a class="navbar-brand" routerLink="/home">
+        <img src="../../../assets/logo.png" style="width:40px;">Clínica Buena Sonrisa
+      </a>
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item " *ngIf="this._authServ.user.tipo=='cliente'">
+              <a class="nav-link" routerLink="/listado-turnos">Ver Turnos<span class="sr-only">(current)</span></a>
+            </li>
+        <li class="nav-item " *ngIf="this._authServ.user.tipo=='cliente'">
+          <a class="nav-link" routerLink="/pedir-turno">Pedir Turno </a>
+        </li>
+        <li class="nav-item" *ngIf="this._authServ.user.tipo=='especialista'">
+            <a class="nav-link" routerLink="/listado-especialista">Ver Pacientes<span class="sr-only">(current)</span></a>
+          </li>
+      </ul>
+      <div class="form-inline my-2 my-lg-0">
+        <div class=" mr-sm-2">{{this._authServ.user.correo}} - {{this._authServ.user.tipo}}</div>
+        <button class="btn btn-outline-danger my-2 my-sm-0" (click)="logOut()" >Salir</button>
+      </div>
+    </div>
+</nav>

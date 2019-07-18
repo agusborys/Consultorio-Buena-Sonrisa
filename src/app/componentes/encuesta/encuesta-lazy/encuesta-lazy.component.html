@@ -1,0 +1,21 @@
+<app-nav></app-nav>
+<div class="container bg-white rounded extra-margin extra-margin-sides" style="margin-top: 15px">
+    <h1 style="text-align: center">Encuesta</h1>
+    <form [formGroup]="form">
+        <div class="form-group">
+            <label>Puntaje para la clinica (0- 10)</label>
+            <input type="range" class="custom-range" formControlName="clinica" min="0" max="10" value="0">
+        </div>
+        <div class="form-group">
+            <label>Puntaje para el especialista (0-10)</label>
+            <input type="range" id="especialista" class="custom-range" formControlName="especialista" min="0" max="10" value="0">
+        </div>
+        <div class="form-group">
+            <label>Reseña</label>
+            <textarea class="form-control" formControlName="resenia"></textarea>
+        </div>
+        <div style="text-align: center; height: 3rem">
+            <button class="btn btn-primary col-4" (click)="enviarFormulario()" [disabled]="!this.form.valid">Enviar</button>
+        </div>
+    </form>
+</div>

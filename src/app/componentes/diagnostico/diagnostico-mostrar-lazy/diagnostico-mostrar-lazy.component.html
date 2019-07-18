@@ -1,0 +1,10 @@
+<!-- <p>diagnostico-mostrar-lazy works!</p> -->
+<app-nav></app-nav>
+<div class="container rounded bg-white" style="margin-top: 15px">
+  <h3 class="display-4" style="text-align: center">Diagnostico</h3>
+  <div class="container jumbotron text-center extra-margin" *ngIf="this.diagnostico != undefined" >
+    
+    <p>{{this.diagnostico.diagnostico}}</p>
+</div>
+<br>
+</div>

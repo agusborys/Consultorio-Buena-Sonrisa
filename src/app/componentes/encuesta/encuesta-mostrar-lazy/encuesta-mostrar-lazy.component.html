@@ -1,0 +1,10 @@
+<app-nav></app-nav>
+<div class="container bg-white rounded extra-margin extra-margin-sides" style="margin-top: 15px">
+    <h3 class="display-4 text-center">Encuesta</h3>
+    <div class="jumbotron text-center extra-margin" *ngIf="this.encuesta != undefined">
+        <p><label>Puntaje a la clinica: </label> {{this.encuesta.clinica}}</p>
+        <p><label>Puntaje al especialista: </label> {{this.encuesta.especialista}}</p>
+        <p><label>Reseña:</label><br>{{this.encuesta.resenia}}</p>
+    </div>
+    <br>
+</div>

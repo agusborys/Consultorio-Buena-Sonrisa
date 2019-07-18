@@ -1,0 +1,3 @@
+<app-alta-turno-lazy (aceptarFormulario)="crearTurno($event)" [especialistas]="this.especialistas"
+    [clientes]=this.clientes></app-alta-turno-lazy>
+<div *ngIf="this._mensaje != ''" class="container extra-margin alert alert-warning">{{this._mensaje}}</div>
