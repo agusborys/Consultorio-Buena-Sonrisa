@@ -2,26 +2,28 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
 
-## Development server
+Trabajo practico de Laboratorio IV con condicion de aprobación directa. Consultorio dentista Clinica Buena Sonrisa, presenta un Login donde los clientes pueden ingresar y registrarse. Como cliente, dentro de la aplicacion se pueden pedir turnos, ver los turnos pedidos, y hacer una encuesta sobre el especialista y la clinica una vez ya atendidos. Como especialista, se puede ver los turnos del dia, atenderlos y hacer un diagnositco o bien cancelar el turno en caso de que el cliente este ausente.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Pagina del sitio: https://consultoriodentista-b2e74.firebaseapp.com
 
-## Code scaffolding
+Lista de usuarios creados:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Especialistas:
 
-## Build
+claudiagenius@mail.com - 123456 - odontopediatra
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+mariamijuki@mail.com - 123456 - cirujia
 
-## Running unit tests
+carlossamsung@mail.com - 123456 - ortodoncista
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+jesusasus@mail.com - 123456 - radiologo
 
-## Running end-to-end tests
+Clientes:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+pepesanchez@mail.com - 123456
 
-## Further help
+pedromanes@mail.com - 123456
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+jesusserie@mail.com - 123456
+
+pablogarcia@mail.com - 123456
